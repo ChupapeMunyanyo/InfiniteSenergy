@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const SkeletonSearch: React.FC = (props) => (
+export const SkeletonSearch: React.FC = (props) => (
   <ContentLoader
     speed={2}
     width={800}

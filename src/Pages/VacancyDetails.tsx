@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useGetVacanciesQuery } from "../../processes/vacancies/vacancyApi";
-import SkeletonDetails from "../../shared/SkeletonList/SkeletonDetails";
-import { setSave } from "../../processes/vacancies/vacancySlice";
+import { useGetVacanciesQuery } from "../processes/vacancies/vacancyApi";
+import { SkeletonDetails } from "../shared/SkeletonList";
+import { setSave } from "../processes/vacancies/vacancySlice";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../app/store";
-import { IVacancyDetails } from "../../entities/vacancy/types";
+import { RootState } from "../app";
+import { IVacancyDetails } from "../entities/vacancy";
 type IVacancyPartial = Partial<IVacancyDetails>;
 export const VacancyDetails: React.FC<IVacancyPartial> = () => {
   const dispatch = useDispatch()

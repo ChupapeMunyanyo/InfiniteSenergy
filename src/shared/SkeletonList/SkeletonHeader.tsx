@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const SkeletonHeader: React.FC = (props) => (
+export const SkeletonHeader: React.FC = (props) => (
   <ContentLoader
     speed={2}
     width={1600}

@@ -1,7 +1,7 @@
-import { VacancyDetails } from '../features/VacancyDetails/VacancyDetails'
+import { VacancyDetails } from '../Pages/VacancyDetails'
 import { VacancyHeader } from '../widgets/VacancyHeader'
-import { AddVacancy } from '../features/AddVacancy/AddVacancy'
-import { VacancySave } from '../features/VacancySave/VacancySave'
+import { AddVacancy } from '../Pages/AddVacancy'
+import { VacancySave } from '../Pages/VacancySave'
 import { createBrowserRouter } from 'react-router-dom'
 import { App } from '../app/App'
 export const router = createBrowserRouter([

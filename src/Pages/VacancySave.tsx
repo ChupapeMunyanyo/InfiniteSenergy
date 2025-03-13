@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../app/store";
-import { clearSavedVacancies, removeSavedVacancies } from "../../processes/vacancies/vacancySlice";
-import { addSavedVacancy } from "../../processes/vacancies/vacancySlice";
+import { RootState } from "../app";
+import { clearSavedVacancies, removeSavedVacancies } from "../processes/vacancies/vacancySlice";
+import { addSavedVacancy } from "../processes/vacancies/vacancySlice";
 
 export const VacancySave: React.FC = () => {
     const dispatch = useDispatch();

@@ -1,16 +1,16 @@
 import React from "react"
 
-import { VacancyHeader } from "../widgets/VacancyHeader"
-import { VacancyMain } from "../features/VacancyList/VacancyMain";
-import { Search } from "../features/Search/Search";
-import SkeletonSearch from "../shared/SkeletonList/SkeletonSearch";
-import SkeletonHeader from "../shared/SkeletonList/SkeletonHeader";
-import SkeletonMain from "../shared/SkeletonList/SkeletonMain";
+import { VacancyHeader } from "../widgets";
+import { VacancyMain } from "../Pages";
+import { Search } from "../features/Search";
+import { SkeletonSearch } from "../shared/SkeletonList";
+import { SkeletonHeader } from "../shared/SkeletonList";
+import { SkeletonMain } from "../shared/SkeletonList";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch, setSortCollection, setAllVacancy, setCurrentPage, setGrade, setYourSkills, setDeveloper, setAdditionJob, setRemotely } from "../processes/vacancies/vacancySlice";
 import { RootState, AppDispatch } from "./store";
 import { useGetVacanciesQuery } from "../processes/vacancies/vacancyApi";
-import { IVacancy } from "../entities/vacancy/types";
+import { IVacancy } from "../entities/vacancy";
 export const App:React.FC = () => {
       const dispatch = useDispatch<AppDispatch>()
       const { data:vacancies=[], isLoading } = useGetVacanciesQuery()  

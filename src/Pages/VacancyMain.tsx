@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { IVacancyMain } from "../../entities/vacancy/types";
+import { IVacancyMain } from "../entities/vacancy";
 export const VacancyMain: React.FC<IVacancyMain> = ({
   id,
   nameCompany,
