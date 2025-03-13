@@ -1,28 +1,9 @@
 import React from "react";
-import krest from "../image/icons8-крестик-78-Photoroom.png";
-import { setInput } from "../ReduxState/vacancySlice";
+import krest from "../../shared/image/icons8-крестик-78-Photoroom.png"
+import { setInput } from "../../processes/vacancies/vacancySlice";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../ReduxState/store";
-interface SearchProps {
-  search: string;
-  setSearch: (value: string) => void;
-  sortCollection: string;
-  setSortCollection: (value: string) => void;
-  amountVacancy: number;
-  setAllVacancy: (value: boolean) => void;
-  allVacancy: boolean;
-  Grade: string[];
-  setGrade: (value: string[]) => void;
-  YourSkills: string[];
-  setYourSkills: (value: string[]) => void;
-  developer: string[];
-  setDeveloper: (value: string[]) => void;
-  addition_Job: string[];
-  setAdditionJob: (value: string[]) => void;
-  remotely: boolean;
-  setRemotely: (value: boolean) => void;
-  todoList: string[];
-}
+import { RootState } from "../../app/store";
+import { SearchProps } from "../../entities/vacancy/types";
 export const Search = ({
   search,
   setSearch,
@@ -264,5 +245,3 @@ export const Search = ({
     </div>
   );
 };
-// "React", "NodeJS", "TypeScript", "Python", "Java","Аналитик данных","Swift","Git","SQL","PostgreSQL","MySQL","Базы данных","JavaScript"
-// "Intern", "Junior", "Middle", "Senior", "Lead"

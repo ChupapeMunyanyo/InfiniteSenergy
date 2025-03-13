@@ -1,30 +1,16 @@
 import React from "react"
 
-import { VacancyHeader } from "./HabrVacancy/VacancyHeader"
-import { VacancyMain } from "./HabrVacancy/VacancyMain"
-import { Search } from "./HabrVacancy/Search";
-import SkeletonSearch from "./SkeletonList/SkeletonSearch";
-import SkeletonHeader from "./SkeletonList/SkeletonHeader";
-import SkeletonMain from "./SkeletonList/SkeletonMain";
+import { VacancyHeader } from "../widgets/VacancyHeader"
+import { VacancyMain } from "../features/VacancyList/VacancyMain";
+import { Search } from "../features/Search/Search";
+import SkeletonSearch from "../shared/SkeletonList/SkeletonSearch";
+import SkeletonHeader from "../shared/SkeletonList/SkeletonHeader";
+import SkeletonMain from "../shared/SkeletonList/SkeletonMain";
 import { useDispatch, useSelector } from "react-redux";
-import { setSearch, setSortCollection, setAllVacancy, setCurrentPage, setGrade, setYourSkills, setDeveloper, setAdditionJob, setRemotely } from './ReduxState/vacancySlice'
-import { RootState, AppDispatch } from "./ReduxState/store";
-import { useGetVacanciesQuery } from './ReduxState/vacancyApi'
-interface IVacancy {
-  id:string;
-  company_name: string;
-  developer:string[];
-  date: string;
-  job_title: string;
-  price: number;
-  addition_Job: string[];
-  YourSkills: string[];
-  Grade:string[];
-  photo_Company: string;
-  photo_OnSave: string;
-  photo_Save: string;
-  photo_Modal: string;
-}
+import { setSearch, setSortCollection, setAllVacancy, setCurrentPage, setGrade, setYourSkills, setDeveloper, setAdditionJob, setRemotely } from "../processes/vacancies/vacancySlice";
+import { RootState, AppDispatch } from "./store";
+import { useGetVacanciesQuery } from "../processes/vacancies/vacancyApi";
+import { IVacancy } from "../entities/vacancy/types";
 export const App:React.FC = () => {
       const dispatch = useDispatch<AppDispatch>()
       const { data:vacancies=[], isLoading } = useGetVacanciesQuery()  

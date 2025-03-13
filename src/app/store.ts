@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import vacanciesReducer from './vacancySlice'
-import { vacancyApi } from "./vacancyApi";
+import { configureStore } from '@reduxjs/toolkit';
+import vacanciesReducer from '../processes/vacancies/vacancySlice'
+import { vacancyApi } from "../processes/vacancies/vacancyApi";
 export const store = configureStore ({
     reducer: {
         vacancies:vacanciesReducer,

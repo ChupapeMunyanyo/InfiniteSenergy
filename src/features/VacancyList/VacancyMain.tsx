@@ -1,20 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-interface IVacancyMain {
-  id:string;
-  nameCompany: string;
-  developer: string[];
-  date: string;
-  job_title: string;
-  price: number;
-  addition_Job: string[];
-  YourSkills: string[];
-  Grade: string[];
-  photo_Company: string;
-  photo_OnSave: string;
-  photo_Save: string;
-  photo_Modal: string;
-}
+import { IVacancyMain } from "../../entities/vacancy/types";
 export const VacancyMain: React.FC<IVacancyMain> = ({
   id,
   nameCompany,

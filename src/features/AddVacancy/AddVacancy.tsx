@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../ReduxState/store";
-import { setSex, setTextarea, addSavedVacancy } from "../ReduxState/vacancySlice";
+import { RootState } from "../../app/store";
+import { setSex, setTextarea, addSavedVacancy } from "../../processes/vacancies/vacancySlice";
 
 export const AddVacancy = () => {
     const dispatch = useDispatch();

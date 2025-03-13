@@ -1,64 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface IVacancy {
-    id: number;
-    company_name: string;
-    developer: string[];
-    date: string;
-    job_title: string;
-    price: number;
-    addition_Job: string[];
-    YourSkills: string[];
-    Grade: string[];
-    photo_Company: string;
-    photo_OnSave: string;
-    photo_Save: string;
-    photo_Modal: string;
-    remotely: boolean;
-    todoList: string[];
-    firstDetails: string;
-    secondDetails: string[];
-    threeDetails: string[];
-}
-
-interface ISavedVacancy {
-    id:number;
-    surname: string;
-    name: string;
-    companyName: string;
-    sex: boolean | null;
-    dayBorn: string;
-    monthBorn: string;
-    yearBorn: string;
-    phone: string;
-    techStack: string;
-    grade: string;
-    workType: string;
-    description: string;
-}
-
-interface IVacancyInitialState {
-    vacancies: IVacancy[];
-    savedVacancies: ISavedVacancy[];
-    search: string;
-    sortCollection: string;
-    currentPage: number;
-    allVacancy: boolean;
-    YourSkills: string[];
-    Grade: string[];
-    moreDetails: string;
-    developer: string[];
-    addition_Job: string[];
-    remotely: boolean;
-    todoList: string[];
-    firstDetails: string;
-    secondDetails: string[];
-    threeDetails: string[];
-    sex: boolean | null;
-    textarea: string;
-    save: boolean;
-    input: boolean;
-}
+import { IVacancySlice } from "../../entities/vacancy/types";
+import { ISavedVacancy } from "../../entities/vacancy/types";
+import { IVacancyInitialState } from "../../entities/vacancy/types";
 
 const initialState: IVacancyInitialState = {
     vacancies: [],
@@ -114,7 +57,7 @@ export const vacanciesSlice = createSlice({
         setRemotely: (state, action: PayloadAction<boolean>) => {
             state.remotely = action.payload;
         },
-        addVacancy: (state, action: PayloadAction<IVacancy>) => {
+        addVacancy: (state, action: PayloadAction<IVacancySlice>) => {
             state.vacancies.push(action.payload);
         },
         setSex: (state, action: PayloadAction<boolean | null>) => {

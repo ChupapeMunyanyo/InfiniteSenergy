@@ -1,22 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useGetVacanciesQuery } from "../ReduxState/vacancyApi";
-import SkeletonDetails from "../SkeletonList/SkeletonDetails";
-import { setSave } from "../ReduxState/vacancySlice";
+import { useGetVacanciesQuery } from "../../processes/vacancies/vacancyApi";
+import SkeletonDetails from "../../shared/SkeletonList/SkeletonDetails";
+import { setSave } from "../../processes/vacancies/vacancySlice";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../ReduxState/store";
-interface IVacancyDetails {
-  job_title: string;
-  price: number;
-  addition_Job: string;
-  YourSkills: string[];
-  photo_Company: string;
-  photo_OnSave: string;
-  photo_Save: string;
-  firstDetails: string;
-  secondDetails: string[];
-  threeDetails: string[];
-}
+import { RootState } from "../../app/store";
+import { IVacancyDetails } from "../../entities/vacancy/types";
 type IVacancyPartial = Partial<IVacancyDetails>;
 export const VacancyDetails: React.FC<IVacancyPartial> = () => {
   const dispatch = useDispatch()
