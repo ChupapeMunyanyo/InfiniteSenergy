@@ -1,1 +1,0 @@
-export { VacancyHeader } from './VacancyHeader'
