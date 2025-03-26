@@ -1,9 +1,26 @@
-export interface User {
-    id: number,
-    name: string
-}
+export interface AuthState {
+    isAuthenticated: boolean;
+    loading: boolean;
+    error: string | null;
+  }
+  
+ export interface Credentials {
+    login: string;
+    password: string;
+  }
 
-export interface UserState {
-    entities:User[],
-    isLoading: 'pending' | 'fulfilled' | 'rejected'
-}
+  export interface DataItem {
+    id: number;
+    name: string;
+    status: string;
+    date_created: string;
+    price: number;
+    category: string;
+  }
+  
+  export interface DataState {
+    items: DataItem[];
+    loading: boolean;
+    saving: boolean;
+    error: string | null;
+  }
