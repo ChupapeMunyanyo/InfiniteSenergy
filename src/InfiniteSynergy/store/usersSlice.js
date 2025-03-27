@@ -6,7 +6,7 @@ const generateUsers = (num) =>
     id,
     name: faker.person.firstName(),
     lastName: faker.person.lastName(),
-    age: faker.number.int({ min: 18, max: 65 }), // ✅ Исправлено
+    age: faker.number.int({ min: 18, max: 65 }),
     email: faker.internet.email(),
   }));
 
